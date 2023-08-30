@@ -1,0 +1,17 @@
+appName: servicename
+appImage: gcr.io/google-samples/microservices-demo/servicename
+appVersion: v0.8.0
+appReplicas: 1
+containerPort: 8080
+servicePort: 8080
+serviceType: ClusterIP
+containerEnvVars:
+  - name: ENV_VAR_ONE
+    value: "valueone"
+resources:
+  requests:
+    cpu: 100m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
